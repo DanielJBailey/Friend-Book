@@ -1,0 +1,25 @@
+<%= form_with(model: person, local: true, class: "ui form") do |f| %>
+    <div class="field">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, require: true, placeholder: "First Name" %>
+    </div>
+    <div class="field">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, require: true, placeholder: "Last Name" %>
+    </div>
+    <div class="field">
+        <%= f.label :avatar %>
+        <%= f.text_field :avatar, require: true, placeholder: "Avatar" %>
+    </div>
+    <div class="field">
+        <%= f.label :phone %>
+        <%= f.text_field :phone, placeholder: "Phone Number" %>
+    </div>
+    <div class="field">
+        <%= f.label :email %>
+        <%= f.text_field :email, placeholder: "Email" %>
+    </div>
+    <%= f.submit "Submit", class: "ui button primary"%>
+    <br/>
+    <br/>
+<% end %>

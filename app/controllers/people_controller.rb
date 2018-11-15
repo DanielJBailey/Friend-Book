@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_action :set_person
+  before_action :set_person, except: [:index, :new, :create]
 
   def index
     @people = Person.all
@@ -45,6 +45,6 @@ class PeopleController < ApplicationController
     end
 
     def set_person
-      @person = Person.find(parama[:id])
+      @person = Person.find(params[:id])
     end
 end
